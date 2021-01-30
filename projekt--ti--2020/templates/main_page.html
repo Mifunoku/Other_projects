@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Najlepsza strona z analizą danych</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Piedra&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='main_style.css') }}">
+    </head>
+
+    <body>
+        <ul class="lista">
+            <li class="do_lewej"><a href="{{ url_for('main_page') }}">Strona główna</a></li>
+            <li class="do_lewej"><a href="{{ url_for('analysis') }}">Analiza</a></li>
+            <li class="do_lewej"><a href="{{ url_for('authors') }}">Autorzy</a></li>
+        </ul>
+        
+        <main>
+        <div class="tekst">
+            <div class="opis">
+                <h1>Opis projektu</h1>
+            </div>
+
+            <div class="opis_tekst">
+                <p>Celem projektu jest stworzenie strony która:</p>
+                <ul>
+                    <li>korzysta z&nbsp;pliku z&nbsp;rozszerzeniem ".csv", zawierającego 3 zmienne, gdzie dane znajdują się w&nbsp;liniach i&nbsp;są oddzielone przecinkami,</li>
+                    <li>po wgraniu pliku przez użytkownika pozwala na wybór zmiennych z&nbsp;list rozwijanych,</li>
+                    <li>wyświetla przeanalizowane dane.</li>
+                </ul>
+            </div>
+
+            <div class="przeznaczenie">
+                <h1>Przeznaczenie strony</h1>
+            </div>
+
+            <div class="przeznaczenie_tekst">
+                <p>Strona analizująca dane podane przez użytkownika:</p>
+                <ul>
+                    <li>wyświetla tabelę ze średnimi wartościami,</li>
+                    <li>tworzy wykres punktowy na którym są zaznaczone wartości zmiennych z&nbsp;pliku oraz średnie.</li>
+                </ul> 
+            </div>
+        </div>
+        </main>
+
+    </body>
+</html>

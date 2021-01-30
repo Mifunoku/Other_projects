@@ -1,0 +1,60 @@
+.tekst {
+    color: black;
+    font-size: 110%;
+    font-family: 'Montserrat', sans-serif;
+    padding: 2rem 2rem;
+    line-height: 1.5;
+    text-align: justify;
+    top: -50px;
+}
+
+.opis {
+    position: relative;
+    font-size: 175%;
+    font-family: 'Impact', sans-serif;
+    text-align: center;
+    color: black;
+    top: auto;
+
+}
+
+.przeznaczenie {
+    position: relative;
+    top: auto;
+    font-size: 175%;
+    font-family: 'Impact', sans-serif;
+    text-align: center;
+    color: black;
+}
+
+.analiza, .dane {
+    font-size: 150%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+    margin-right: 3rem;
+    top: -50px;
+}
+.lista {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+}
+  
+.do_lewej {
+    float: left;
+}
+  
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+li a:hover {
+    background-color: #3EB304 ;
+}

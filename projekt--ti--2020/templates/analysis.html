@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Analiza danych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Piedra&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/authors-style.css">
+
+</head>
+
+<body>
+    
+    <ul class="lista">
+        <li class="do_lewej"><a href="{{ url_for('main_page') }}">Strona główna</a></li>
+        <li class="do_lewej"><a href="{{ url_for('analysis') }}">Analiza</a></li>
+        <li class="do_lewej"><a href="{{ url_for('authors') }}">Autorzy</a></li>
+    </ul>
+
+    <div class=naglowek>
+        <header>Analiza danych</header>
+    </div>
+    {% if not categorical and not numerical and not selected_1 and not selected_2 and not selected_3 %}
+        <div id="container_file">
+            <div class="upload_file_form">
+                <form action="{{ url_for('analysis') }}" method="POST" enctype="multipart/form-data" class="form">
+                    <input type="file" name="file" id="file"/>
+                    <input type="submit" value="Analizuj" id="submit"/>
+                </form>
+            </div>
+            <div>
+                <p id="label_par_choose">
+                    <label id="label_div_choose" for="file">Wybierz plik...</label>
+                </p>
+            </div>
+            <div>
+                <p id="label_par_submit">
+                <label id="label_div_submit" for="submit">Zatwierdź</label>
+                </p>
+            </div>
+            <div id="clear"></div>
+        </div>
+    {% endif %}
+
+    {% if numerical and categorical %}
+        <form action="{{ url_for('analysis') }}" method="POST" enctype="multipart/form-data" id="comboboxes">
+            <select name="numerical_1">
+                {% for item in numerical %}
+                    <option> {{ item }}</option>
+                {% endfor %}
+            </select>
+            <select name="numerical_2">
+                {% for item in numerical %}
+                    <option> {{ item }}</option>
+                {% endfor %}
+            </select>
+            <select name="categorical_3">
+                {% for item in categorical %}
+                    <option> {{ item }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Zatwierdź" id="submit_selected"/>
+        </form>
+    {% endif %}
+
+    {% if selected_1 and selected_2 and selected_3 %}
+        <div>
+            <table id="average">
+                <tr>
+                    <td>  </td>
+                    {% for cat in category %}
+                        <td>{{ cat }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>średnie dla {{ selected_1 }}</td>
+                    {% for mean in mean_1 %}
+                        <td>{{ mean }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>średnie dla {{ selected_2 }}</td>
+                    {% for mean in mean_2 %}
+                        <td>{{ mean }}</td>
+                    {% endfor %}
+                </tr>
+            </table>
+            <p>
+                <img alt="Line drawing" src="{{drawing}}"></img>
+            </p>
+        </div>
+    {% endif %}
+
+</body>
+</html>

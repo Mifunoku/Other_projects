@@ -1,0 +1,100 @@
+#tabela {
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 200%;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+#tabela, th, td {
+    border: 1px solid black;
+    padding: 20px;
+  }
+#tabela th {
+    background: #68F079;
+}
+#tabela td {
+    background: #F0EEA8;
+}
+.heading, .naglowek {
+    font-size: 450%;
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    font-family: Impact, sans-serif;
+}
+
+#clear{
+    clear: both;
+}
+
+.upload_file_form{
+    display: none;
+}
+#file{
+
+}
+#label_div_choose{
+    height: 50px;
+    width: 160px;
+    background: rosybrown;
+    border: solid 5px indianred;
+    font-size: 20px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+}
+#label_div_choose:hover{
+    border: solid 5px green;
+}
+#label_div_submit{
+    height: 50px;
+    width: 120px;
+    background: rosybrown;
+    border: solid 5px indianred;
+    font-size: 20px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+}
+#label_div_submit:hover{
+    border: solid 5px green;
+}
+#label_par_choose{
+    text-align: center;
+}
+#label_par_submit{
+    text-align: center;
+}
+
+#container_file{
+    height: 60px;
+    width: 300px;
+    margin: auto;
+
+}
+.lista {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: green;
+}
+
+.do_lewej {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+li a:hover {
+  background-color: #3EB304 ;
+}

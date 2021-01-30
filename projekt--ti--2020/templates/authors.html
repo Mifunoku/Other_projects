@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Informacje o autorach</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Piedra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/authors-style.css">
+</head>
+
+<body>
+    <ul class="lista">
+        <li class="do_lewej"><a href="{{ url_for('main_page') }}">Strona główna</a></li>
+        <li class="do_lewej"><a href="{{ url_for('analysis') }}">Analiza</a></li>
+        <li class="do_lewej"><a href="{{ url_for('authors') }}">Autorzy</a></li>
+    </ul>
+    
+    <div class="heading">
+        <header>Dane kontaktowe do autorów strony</header>
+    </div>
+    <main>
+        <table id="tabela">
+            <tr>
+                <th>Imię i nazwisko</th>
+                <th>Numer indeksu</th>
+                <th>E-mail</th>
+            </tr>
+            <tr>
+                <td>Edyta Łabędzka</td>
+                <td>255730</td>
+                <td>255730@student.pwr.edu.pl</td>
+            </tr>
+            <tr>
+                <td>Błażej Jaskólski</td>
+                <td>256363</td>
+                <td>256363@student.pwr.edu.pl</td>
+            </tr>
+            <tr>
+                <td>Cyprian Pełka</td>
+                <td>255771</td>
+                <td>255771@student.pwr.edu.pl</td>
+            </tr>
+            <tr>
+                <td>Bartosz Różycki</td>
+                <td>255740</td>
+                <td>255740@student.pwr.edu.pl</td>
+            </tr>
+            <tr>
+                <td>Piotr Zieleń</td>
+                <td>255752</td>
+                <td>255752@student.pwr.edu.pl</td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+</html>
